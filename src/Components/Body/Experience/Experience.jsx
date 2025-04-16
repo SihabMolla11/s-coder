@@ -31,10 +31,10 @@ const Experience = () => {
                                 />
                             </div>
                             <div>
-                                <h3 className="text-xl text-[#dbdada] font-bold">
+                                <h3 className="text-xl text-white font-bold">
                                     {experience?.name}
                                 </h3>
-                                <p className="flex items-center justify-start gap-1 text-[#dbdada]">
+                                <p className="flex items-center justify-start gap-1 text-white">
                                     <ImLocation2 />
                                     <span className="text-sm font-semibold">
                                         {experience?.location}
@@ -46,8 +46,8 @@ const Experience = () => {
                             type="button"
                             className="uppercase font-bold py-1 px-4 rounded-full flex items-center  gap-2 bg-[#d56cff63]"
                         >
-                            <FaRegCalendarAlt />
-                            <span className="">
+                            <FaRegCalendarAlt className="text-black"/>
+                            <span className="text-black">
                                 {experience?.started} -{" "}
                                 {experience?.end ? experience?.end : "Present"}
                             </span>
@@ -64,7 +64,7 @@ const Experience = () => {
                                 className="h-full w-full"
                             />
                         </div>
-                        <h3 className="text-2xl font-bold capitalize">
+                        <h3 className="text-2xl font-bold capitalize text-black">
                             {experience?.position}
                         </h3>
                     </div>

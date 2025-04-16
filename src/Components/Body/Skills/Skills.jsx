@@ -2,22 +2,20 @@ import { animated, useSpring } from "react-spring";
 import { skillImages, tools } from "../../../../public/skills_images";
 
 const Skills = () => {
-    function Number({ n }) {
-        const { number } = useSpring({
-            from: { number: 0 },
-            number: n,
-            delay: 300,
-            config: { mass: 1, tension: 20, friction: 10 },
-        });
-        return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-    }
+  function Number({ n }) {
+    const { number } = useSpring({
+      from: { number: 0 },
+      number: n,
+      delay: 300,
+      config: { mass: 1, tension: 20, friction: 10 },
+    });
+    return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+  }
 
-    return (
-        <div data-aos="fade-up" className="my-container mt-10 ">
-            <h2 className="text-4xl text-center font-bold text-white uppercase">
-                Skills
-            </h2>
-            {/* <div className="flex flex-col gap-10 md:flex-row justify-between text-white mt-10 ">
+  return (
+    <div data-aos="fade-up" className="my-container mt-10 ">
+      <h2 className="text-4xl text-center font-bold text-white uppercase">Skills</h2>
+      {/* <div className="flex flex-col gap-10 md:flex-row justify-between text-white mt-10 ">
                 <div className="w-full " data-aos="fade-right">
                     <h2 className="font-semibold text-xl my-3">
                         <span className="bg-gradient-to-l rounded-md from-[#D56BFD] to-[#860C78] p-2">
@@ -217,55 +215,39 @@ const Skills = () => {
                 </div>
             </div> */}
 
-            <h3 className="text-3xl text-center font-bold text-white uppercase mt-16">
-                Technologies I Use
-            </h3>
+      <h3 className="text-3xl text-center font-bold text-white uppercase mt-16">
+        Technologies I Use
+      </h3>
 
-            <div className="flex flex-wrap gap-4 items-center justify-center w-full max-w-[1000px] mx-auto mt-6">
-                {skillImages?.map((skill) => (
-                    <button
-                        key={skill?.id}
-                        className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(25%-16px)] lg:w-[calc(20%-16px)] h-10"
-                    >
-                        <img
-                            className="w-5"
-                            height={50}
-                            width={50}
-                            src={skill?.image}
-                            alt={skill?.image}
-                        />
-                        <span className="text-sm font-semibold">
-                            {skill?.name}
-                        </span>
-                    </button>
-                ))}
-            </div>
+      <div className="flex flex-wrap gap-4 items-center justify-center w-full max-w-[1000px] mx-auto mt-6">
+        {skillImages?.map((skill) => (
+          <button
+            key={skill?.id}
+            className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(25%-16px)] lg:w-[calc(20%-16px)] h-10"
+          >
+            <img className="w-5" height={50} width={50} src={skill?.image} alt={skill?.image} />
+            <span className="text-sm font-semibold text-black">{skill?.name}</span>
+          </button>
+        ))}
+      </div>
 
-            <h3 className="text-3xl text-center font-bold text-white uppercase mt-16">
-                DEVELOPMENT & PRODUCTIVITY <br /> TOOLS I USE
-            </h3>
+      <h3 className="text-3xl text-center font-bold text-white uppercase mt-16">
+        DEVELOPMENT & PRODUCTIVITY <br /> TOOLS I USE
+      </h3>
 
-            <div className="flex flex-wrap gap-4 items-center justify-center w-full max-w-[1000px] mx-auto mt-6">
-                {tools?.map((skill) => (
-                    <button
-                        key={skill?.id}
-                        className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(30%-16px)] lg:w-[calc(25%-16px)] h-10"
-                    >
-                        <img
-                            className=" w-5"
-                            height={50}
-                            width={50}
-                            src={skill?.image}
-                            alt={skill?.image}
-                        />
-                        <span className="text-sm font-semibold">
-                            {skill?.name}
-                        </span>
-                    </button>
-                ))}
-            </div>
-        </div>
-    );
+      <div className="flex flex-wrap gap-4 items-center justify-center w-full max-w-[1000px] mx-auto mt-6">
+        {tools?.map((skill) => (
+          <button
+            key={skill?.id}
+            className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(30%-16px)] lg:w-[calc(25%-16px)] h-10"
+          >
+            <img className=" w-5" height={50} width={50} src={skill?.image} alt={skill?.image} />
+            <span className="text-sm font-semibold text-black">{skill?.name}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Skills;

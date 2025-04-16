@@ -6,16 +6,12 @@ const ProjectCart = ({ data }) => {
   return (
     <div className="bg-[#ffffffa1] w-full p-4 rounded-xl flex flex-col lg:flex-row items-center gap-6">
       <div className="w-full  lg:w-[50%] rounded-lg overflow-hidden h-full">
-        <img
-          className="w-full h-[320px] object-cover"
-          src={data?.image}
-          alt="project_image"
-        />
+        <img className="w-full h-[320px] object-cover" src={data?.image} alt="project_image" />
       </div>
       <div className="w-full lg:w-[50%]">
-        <h3 className="text-2xl font-semibold "> {data?.name}</h3>
+        <h3 className="text-2xl font-semibold text-black"> {data?.name}</h3>
         <div className="mt-4">
-          <p className="font-medium text-sm">Used Technologies</p>
+          <p className="font-medium text-black text-xl">Technologists</p>
           <div className="mt-2 space-x-2 space-y-2">
             {data?.technology?.map((item, index) => (
               <div
@@ -29,7 +25,7 @@ const ProjectCart = ({ data }) => {
                   src={item?.image}
                   alt="skill image"
                 />
-                <p className="text-sm font-semibold">{item?.name}</p>
+                <p className="text-sm font-semibold text-black">{item?.name}</p>
               </div>
             ))}
           </div>
@@ -41,8 +37,8 @@ const ProjectCart = ({ data }) => {
                   to={data?.liveSiteLink}
                   className="inline-flex px-4 py-2 rounded-lg items-center gap-2 bg-[#ffffffab]"
                 >
-                  <IoIosLink />
-                  <p className="text-[12px] font-semibold">Live Site Link</p>
+                  <IoIosLink className="text-black"/>
+                  <p className="text-[12px] font-semibold text-black">Live Site Link</p>
                 </Link>
               )}
               {data?.clientCode && (

@@ -10,7 +10,7 @@ export const experiences = [
         website: "http://bitpixelbd.com",
         responsibilities: [
             {
-                text: "Design and development over 3 completed React js and Next Js project. Showcasing proficiency in front-end design and development",
+                text: "Design and development over 7+ completed React js and Next Js project. Showcasing proficiency in front-end design and development",
             },
             {
                 text: "Creating APIs based on frontend requirements and formatting backend data to ensure compatibility and optimal use by the frontend.",
