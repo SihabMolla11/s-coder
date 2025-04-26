@@ -12,7 +12,7 @@ const BannerText = () => {
                     <Typewriter
                         words={[
                             "Full Stack Web Developer",
-                            "Expert on Front End Development",
+                            // "Expert on Front End Development",
                         ]}
                         loop={true}
                         cursor

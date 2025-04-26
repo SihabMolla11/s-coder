@@ -1,69 +1,38 @@
 import React from "react";
-import { IoIosLink } from "react-icons/io";
-import { Link } from "react-router-dom";
 
 const ProjectCart = ({ data }) => {
   return (
-    <div className="bg-[#ffffffa1] w-full p-4 rounded-xl flex flex-col lg:flex-row items-center gap-6">
-      <div className="w-full  lg:w-[50%] rounded-lg overflow-hidden h-full">
-        <img className="w-full h-[320px] object-cover" src={data?.image} alt="project_image" />
-      </div>
-      <div className="w-full lg:w-[50%]">
-        <h3 className="text-2xl font-semibold text-black"> {data?.name}</h3>
-        <div className="mt-4">
-          <p className="font-medium text-black text-xl">Technologists</p>
-          <div className="mt-2 space-x-2 space-y-2">
-            {data?.technology?.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white  inline-flex items-center gap-2 px-2 py-1 rounded-md"
-              >
-                <img
-                  className="h-[20px] w-[20px] object-cover"
-                  height={20}
-                  width={20}
-                  src={item?.image}
-                  alt="skill image"
-                />
-                <p className="text-sm font-semibold text-black">{item?.name}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-5">
-            <p className="font-medium text-sm">Links</p>
-            <div className="flex flex-col md:flex-row items-start lg:items-center gap-3 mt-2">
-              {data?.liveSiteLink && (
-                <Link
-                  to={data?.liveSiteLink}
-                  className="inline-flex px-4 py-2 rounded-lg items-center gap-2 bg-[#ffffffab]"
-                >
-                  <IoIosLink className="text-black"/>
-                  <p className="text-[12px] font-semibold text-black">Live Site Link</p>
-                </Link>
-              )}
-              {data?.clientCode && (
-                <Link
-                  to={data?.clientCode}
-                  className="inline-flex px-4 py-2 rounded-lg items-center gap-2 bg-[#ffffffab]"
-                >
-                  <IoIosLink />
-                  <p className="text-[12px] font-semibold">Client Code Link</p>
-                </Link>
-              )}
-              {data?.serverCodeLink && (
-                <Link
-                  to={data?.serverCodeLink}
-                  className="inline-flex px-4 py-2 rounded-lg items-center gap-2 bg-[#ffffffab]"
-                >
-                  <IoIosLink />
-                  <p className="text-[12px] font-semibold">Server Code Link</p>
-                </Link>
-              )}
+    <>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full w-full">
+        <img src={data?.image} alt="Mountain" class="w-full  object-cover" />
+
+        <hr className="border-t-4 border-purple-500 rounded-full mx-6 my-4" />
+
+        <div class="px-6 pb-4 ">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">{data?.name}</h2>
+          <p class="text-black  leading-tight mb-4">{data?.description}</p>
+
+          <div className="">
+            <div className="grid grid-cols-3 lg:grid-cols-4 gap-2 mb-6">
+              {data?.technology?.map((item) => (
+                <div className="flex border justify-center border-purple-200 px-3 py-0.5 gap-2 rounded-full overflow-hidden items-center">
+                  <img className="w-5 h-5" src={item?.image} alt="" />{" "}
+                  <p className="text-xs font-medium text-black whitespace-nowrap">{item?.name}</p>
+                </div>
+              ))}
             </div>
+
+            <a
+              className="bg-purple-700 hover:bg-purple-800 text-white font-medium  py-2 px-6 rounded-md "
+              href={data?.liveSiteLink}
+              target="_blank"
+            >
+              View Project
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

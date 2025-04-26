@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { animated, useSpring } from "react-spring";
-import Animated from "../../../animated/Animated";
-import image1 from "../../../assets/about.png";
-import DownloadResume from "../../DownloadResume/DownloadResume";
-import SocialIcons from "../../SocialIcons/SocialIcons";
+// import Animated from "../../../animated/Animated";
+// import image1 from "../../../assets/about.png";
+// import DownloadResume from "../../DownloadResume/DownloadResume";
+// import SocialIcons from "../../SocialIcons/SocialIcons";
 
 const About = () => {
   const [info, setInfo] = useState("self");
@@ -27,7 +27,7 @@ const About = () => {
 
       <div className="">
         <img
-          className="w-48 rounded-full border-4 border-purple-500 my-8 mx-auto"
+          className="w-52 rounded-full border-4 border-purple-500 my-8 mx-auto"
           src="/image/me/sihab_uddin_molla.png"
           alt="sihab uddin molla"
         />

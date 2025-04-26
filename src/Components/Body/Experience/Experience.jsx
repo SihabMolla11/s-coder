@@ -16,7 +16,7 @@ const Experience = () => {
               to={experience?.website}
               target="_blank"
             >
-              <div className="h-14 w-14 p-4 border bg-[#61616173] border-[#8B1381] rounded-full">
+              <div className="h-16 w-16 p-3 border bg-[#61616173] border-[#8B1381] rounded-full">
                 <img
                   className="w-full h-full"
                   height={100}
