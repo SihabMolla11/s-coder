@@ -223,10 +223,12 @@ const Skills = () => {
         {skillImages?.map((skill) => (
           <button
             key={skill?.id}
-            className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(25%-16px)] lg:w-[calc(20%-16px)] h-10"
+            className="bg-white flex items-center gap-2 px-7 py-4 rounded-full justify-center md:w-[calc(30%-16px)] lg:w-[calc(25%-16px)] h-14"
           >
-            <img className="w-5" height={50} width={50} src={skill?.image} alt={skill?.image} />
-            <span className="text-sm font-semibold text-black">{skill?.name}</span>
+            <img className="w-10" height={100} width={100} src={skill?.image} alt={skill?.image} />
+            <span className="text-base whitespace-nowrap font-semibold text-black ">
+              {skill?.name}
+            </span>
           </button>
         ))}
       </div>
@@ -239,10 +241,10 @@ const Skills = () => {
         {tools?.map((skill) => (
           <button
             key={skill?.id}
-            className="bg-white flex items-center gap-2 px-5 py-2 rounded-full justify-center md:w-[calc(30%-16px)] lg:w-[calc(25%-16px)] h-10"
+            className="bg-white flex items-center gap-2 px-7 py-4 rounded-full justify-center md:w-[calc(30%-16px)] lg:w-[calc(25%-16px)] h-14"
           >
-            <img className=" w-5" height={50} width={50} src={skill?.image} alt={skill?.image} />
-            <span className="text-sm font-semibold text-black">{skill?.name}</span>
+            <img className=" w-8 max-h-10" height={100} width={100} src={skill?.image} alt={skill?.image} />
+            <span className="text-base whitespace-nowrap font-semibold text-black">{skill?.name}</span>
           </button>
         ))}
       </div>
